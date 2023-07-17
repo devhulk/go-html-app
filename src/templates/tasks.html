@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>tasks</title>
+		<link rel="stylesheet" href="/src/output.css">
+	</head>
+	<body class="container mx-auto px-4">
+		<div class="">
+		<h1 class="text-3xl font-bold underline">{{.PageTitle}}</h1>
+		<ul class="">
+			{{range .Tasks}}
+			{{if .Done}}
+			<li class="text-green">{{.Title}}</li>
+			{{else}}
+			<div class="text-orange">
+			<li class="font-mono rounded">{{.Title}}</li>
+			</div>
+			{{end}}
+			{{end}}
+		</ul>
+		</div>
+	</body>
+</html>
